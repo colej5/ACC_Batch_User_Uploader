@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/addUsers.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    
+    <title>Digital Delivery Hub - Batch User Uploader</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-section">
+            <h1>Keltbray DD Hub</h1>
+        </div>
+        <div class="header-section">
+            <h2>Batch User Uploader</h2>
+        </div>
+        <div class="header-section">
+            <h3></h3>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <form>
+                <div class="form-group">
+                    <label for="start-folder-url">Paste URL from project space to get targeted project to add users to:</label>
+                    <input type="text" id="start-folder-url" name="start-folder-url" placeholder="Paste URL">
+                    <div class="extracted-ids" id="extracted-ids">
+                        ProjectId: <span id="project-id"></span><br>
+                        Project Name: <span id="project-name"></span><br><br>
+                    </div>
+                    <div id="drop-area" ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragenter="handleDragEnter(event)" ondragleave="handleDragLeave(event)">
+                        <i class="file-icon fas fa-file-alt"></i>
+                        <p>Drag and drop a CSV file here</p>
+                        <input type="file" id="fileInput" onchange="handleFileSelect(event)">
+                      </div>
+                      <div id="file-info"></div>
+                </div>
+
+
+                  <!-- Font Awesome CDN -->
+
+                <div class="form-group">
+                    <div class="container">
+                        <div class="progress-bar__container">
+                          <div class="progress-bar-Main">
+                            <span class="progress-bar-Main__text">Users added Successfully!</span>
+                          </div>
+                        </div><br>
+                      </div>
+                </div>
+                <input type="submit" id="submitButton" value="Start ">
+
+            </form>
+        </div>
+
+
+        <div class="form-container" id="permissions-container">
+            <h3>Output Log</h3>
+            <ul id="outputLog-list"></ul>
+        </div>
+    </main>
+    <script>
+
+    </script>
+</body>
+</html>
