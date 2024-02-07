@@ -15,15 +15,20 @@ header {
 .header-section {
     flex: 1;
 }
+img.logo_H {
+    float: left;
+    height: 80px;
+  }
 
 .header-section:nth-child(2) {
     text-align: center;
-    flex: 3; /* 60% of the width */
+    flex: 2.5; /* 60% of the width */
+
 }
 
 .header-section:first-child,
 .header-section:last-child {
-    flex: 1; /* 20% of the width each */
+    flex: 1.5; /* 20% of the width each */
 }
 
 /* Additional styling */
